@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * JsonNode.module file.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function JsonNode_menu() {
+  $items = array();
+  $items['node/%node/json'] = array(
+    'page callback' => '_returnJson_endpoint',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Callback
+ */
+function _returnJson_endpoint($node) {
+  drupal_json_output($node);
+}
+
+

@@ -1,0 +1,4 @@
+name = JsonNode
+description = Return node in Json format
+core = 7.x
+package = Other
